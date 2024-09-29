@@ -1,8 +1,9 @@
 // import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+// import 'package:flutter/rendering.dart';
+// import 'package:flutter/widgets.dart';
 
 void main(){
   runApp(const MyApp());
@@ -65,11 +66,68 @@ class _QuizAppState extends State{
   
    int score=0;
 
-   bool quizscreen=true;
+   int quizscreen=0;
 
    Scaffold quizshow(){
-     if(quizscreen){
-      return Scaffold(
+     if(quizscreen==0){
+       return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Quiz App",
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w900,
+            color: Colors.orange,
+          ),),
+          backgroundColor: Colors.blue,
+          centerTitle: true,
+      ),
+
+      body:Center(
+        child: Column(children: [
+        const SizedBox(
+          height: 40,
+        ),
+        Container(
+          height: 400,
+          width: 300,
+          child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16106ny8lGJF7-KsbVm7fvAPZSfDMF-qH1Q&s",
+           fit: BoxFit.contain,
+          ),
+        ),
+
+        SizedBox(
+          height: 70,
+          width: 180,
+          child: ElevatedButton(
+                onPressed: (){
+                  quizscreen=1;
+                  setState(() {});
+                }, 
+                // child: Text("Start Quiz"),
+                style: ButtonStyle(
+               backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
+                return Colors.deepOrange;
+                 }), 
+              ),
+                child: const Text(
+                  "Start Quiz",
+                  style: TextStyle(
+                    fontSize: 20
+                  ),
+                  ),
+          
+              ),
+        )
+        ],),
+        ),
+      );
+
+      
+
+
+     }else if(quizscreen==1){
+        return Scaffold(
       appBar: AppBar(
         title: const Text(
           "Quiz App",
@@ -143,7 +201,7 @@ class _QuizAppState extends State{
                 
             }, 
              style: ButtonStyle(
-             backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+             backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
               return (op1==1) ? Colors.green : (op1==2)?Colors.red:Colors.white;
        }), 
             ),
@@ -188,7 +246,7 @@ class _QuizAppState extends State{
               
             },
             style: ButtonStyle(
-             backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+             backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
               // return op1 ? Colors.green : Colors.white;
               return (op2==1) ? Colors.green : (op2==2)?Colors.red:Colors.white;
 
@@ -234,7 +292,7 @@ class _QuizAppState extends State{
             
             },
              style: ButtonStyle(
-             backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+             backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
               // return op1 ? Colors.green : Colors.white;
               return (op3==1) ? Colors.green : (op3==2)?Colors.red:Colors.white;
 
@@ -279,7 +337,7 @@ class _QuizAppState extends State{
               
             }, 
             style: ButtonStyle(
-             backgroundColor: MaterialStateProperty.resolveWith<Color>((states) {
+             backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
               // return op1 ? Colors.green : Colors.white;
               return (op4==1) ? Colors.green : (op4==2)?Colors.red:Colors.white;
        }),
@@ -351,7 +409,7 @@ class _QuizAppState extends State{
             
               if(indexofQue==quizQuestion.length-1){
                 print(score);
-                quizscreen=false;
+                quizscreen+=1;
               }
               
             if(indexofQue<quizQuestion.length-1){
@@ -382,8 +440,9 @@ class _QuizAppState extends State{
           ),
        ),
     );
+
      }else{
-      return Scaffold(
+        return Scaffold(
       appBar: AppBar(
         title: const Text(
           "Quiz Result",
@@ -418,8 +477,8 @@ class _QuizAppState extends State{
               fontSize: 20,
               fontWeight: FontWeight.w700
             ),
-
           ),
+
           const SizedBox(
             height: 30,
           ),
@@ -433,11 +492,36 @@ class _QuizAppState extends State{
             ),
             ),
 
+            const SizedBox(
+              height: 30,
+            ),
+           SizedBox(
+          height: 70,
+          width: 180,
+          child: ElevatedButton(
+                onPressed: (){
+                  quizscreen=1;
+                  setState(() {});
+                }, 
+                style: ButtonStyle(
+               backgroundColor: WidgetStateProperty.resolveWith<Color>((states) {
+                return Colors.deepOrange;
+                 }), 
+              ),
+                child: const Text(
+                  "ReStart Quiz",
+                  style: TextStyle(
+                    fontSize: 20
+                  ),
+                  ),
+          
+              ),
+        )
+
         ],),
       )
-
       );
-      
+
 
      }
    }
