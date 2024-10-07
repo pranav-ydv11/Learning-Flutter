@@ -1,0 +1,12 @@
+com.example.column_scenario.app-core-1.6.0-0 C:\Users\prana\.gradle\caches\transforms-3\284a410c767ad6c7a2b0ffc8d8d85981\transformed\core-1.6.0\res
+com.example.column_scenario.app-jetified-window-java-1.0.0-beta04-1 C:\Users\prana\.gradle\caches\transforms-3\2a215381204751055df81b6269e717b7\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.column_scenario.app-jetified-annotation-experimental-1.1.0-2 C:\Users\prana\.gradle\caches\transforms-3\3d2f03fc996c2e0aa3dee5cfa3002cd1\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.column_scenario.app-jetified-window-1.0.0-beta04-3 C:\Users\prana\.gradle\caches\transforms-3\f302e75fb7efd781bcf1a29281c188da\transformed\jetified-window-1.0.0-beta04\res
+com.example.column_scenario.app-debug-4 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\android\app\src\debug\res
+com.example.column_scenario.app-main-5 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\android\app\src\main\res
+com.example.column_scenario.app-pngs-6 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\generated\res\pngs\debug
+com.example.column_scenario.app-resValues-7 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\generated\res\resValues\debug
+com.example.column_scenario.app-rs-8 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\generated\res\rs\debug
+com.example.column_scenario.app-mergeDebugResources-9 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.column_scenario.app-mergeDebugResources-10 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.column_scenario.app-merged_res-11 P:\Flutter\c2w_Flutter\Assignment\Stateless\column_scenario\build\app\intermediates\merged_res\debug
