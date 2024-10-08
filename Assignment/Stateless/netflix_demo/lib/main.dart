@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
@@ -25,19 +26,23 @@ class MainApp extends StatelessWidget {
           actions: [
             
             Padding(
-              padding: const EdgeInsets.only(right: 120),
+              padding: const EdgeInsets.only(right: 100),
               child: Image.network(
                  "https://variety.com/wp-content/uploads/2020/05/netflix-logo.png"
               
                 ),
               
               ),
-              const Icon(Icons.account_circle_rounded,
-              size: 35,
-              color: Colors.white,
+              const Padding(
+                padding: EdgeInsets.only(right: 10),
+                child:  Icon(Icons.account_circle_rounded,
+                size: 35,
+                color: Colors.white,
+                            
+                ),
               ),
           ],                  
-            backgroundColor: Colors.black,
+            backgroundColor:const Color.fromARGB(255, 0, 0, 0),
         ),
        body: ListView(
         children: [
@@ -53,23 +58,30 @@ class MainApp extends StatelessWidget {
                   "Trending",
                   style: TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w500
+                    fontWeight: FontWeight.w700
                   ),
                 ),
                  Text("Movies",
                 style: TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w500
+                    fontWeight: FontWeight.w700
                   ),),
                  Text("Original",
                 style: TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w500
+                    fontWeight: FontWeight.w700
                   ),),
                  Text("Kids",
                 style: TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.w500
+                    fontWeight: FontWeight.w700
+                  ),
+                  ),
+
+                  Text("Series",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700
                   ),),
 
             ],),           
@@ -297,7 +309,7 @@ class MainApp extends StatelessWidget {
 
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),                
-                  child:  Image.network("https://i.pinimg.com/736x/5b/c7/33/5bc7337a767d2597e02c5d8b07632a5a.jpg"
+                  child:  Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjjoNgPQrgqKiNg1LuI3odLjaIYjNEI5uug&s"
                   ),),
 
                 const SizedBox(
@@ -306,7 +318,7 @@ class MainApp extends StatelessWidget {
 
                  ClipRRect(
                     borderRadius: BorderRadius.circular(20),                
-                  child:  Image.network("https://i.pinimg.com/474x/d5/10/f2/d510f2e6f6a0862043e17b6a7fc8d5da.jpg"
+                  child:  Image.network("https://i.pinimg.com/originals/9e/81/72/9e817220fa873dabfd540841a14f20cb.jpg"
                   ),),
 
                    const SizedBox(
@@ -315,7 +327,7 @@ class MainApp extends StatelessWidget {
 
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),                
-                  child:  Image.network("https://images.squarespace-cdn.com/content/v1/5f73dd32e3f00e384ee53676/1610746402979-7603C9ULL22Q13E5VMXC/Chaplin+Rink.jpg"
+                  child:  Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3QCXUfRdF9SOA9k_SahP7sWnzRyPJB4YTsQ&s"
                   ),),
 
                    const SizedBox(
@@ -324,7 +336,7 @@ class MainApp extends StatelessWidget {
 
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),                
-                  child:  Image.network("https://mir-s3-cdn-cf.behance.net/project_modules/hd/5fc35e88131915.5dccf96d1af75.jpg"
+                  child:  Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTS02l3mte3XUhpjHjYmMw8aXnMrmNHHIfjw&s"
                   ),),
                 
                 ],),
